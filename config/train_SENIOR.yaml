@@ -1,0 +1,64 @@
+defaults:
+  - agent: sac
+
+# this needs to be specified manually
+experiment: M-SENIOR
+
+# reward learning
+segment: 50
+activation: tanh
+num_seed_steps: 1000
+num_unsup_steps: 9000
+num_interact: 5000
+reward_lr: 0.0003
+reward_update: 10
+reset_update: 100
+topK: 5
+ensemble_size: 3
+large_batch: 10
+label_margin: 0.0
+teacher_beta: -1
+teacher_gamma: 1
+teacher_eps_mistake: 0
+teacher_eps_skip: 0
+teacher_eps_equal: 0
+outer_weight: 0.1
+
+# reward learning
+max_feedback: 1000
+reward_batch: 10
+num_meta_steps: 10000
+# senior
+time_decrease: 0.01 
+curiosity_fre: 1000  # update curiosity buffer
+
+# scheduling
+reward_schedule: 0
+
+num_train_steps: 5000
+replay_buffer_capacity: ${num_train_steps}
+
+# evaluation config
+eval_frequency: 10000
+num_eval_episodes: 10
+device: cuda
+
+# logger
+log_frequency: 10000
+log_save_tb: true
+
+# video recorder
+save_video: false
+
+# setups
+seed: 12345
+
+# Environment
+env: metaworld_door-open-v2
+gradient_update: 1
+
+# hydra configuration
+hydra:
+  name: ${env}
+  run:
+    dir: ./exp/${experiment}/${env}/maxfeed${max_feedback}_Rbatch${reward_batch}/seed${seed}_${now:%Y-%m-%d}-${now:%H-%M-%S}
