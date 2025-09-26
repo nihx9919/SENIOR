@@ -23,8 +23,6 @@ Run the following command fot six MetaWorld tasks:
 bash run_SENIOR.sh
 ```
 
-https://github.com/nihx9919/SENIOR
-
 ## Citation
 
 ```python
