@@ -107,7 +107,7 @@ setup(
         ],
         "extra": [
             # For render
-            "opencv-python",
+            # "opencv-python",
             # For atari games,
             "atari_py~=0.2.0",
             "pillow",

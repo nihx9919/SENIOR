@@ -18,3 +18,5 @@ dependencies:
     - glfw==1.11.2
     - scikit-image
     - scikit-learn
+    - cython==0.29.21
+    - 'mujoco-py<2.2,>=2.1'

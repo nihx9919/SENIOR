@@ -35,7 +35,7 @@ curiosity_fre: 1000  # update curiosity buffer
 # scheduling
 reward_schedule: 0
 
-num_train_steps: 5000
+num_train_steps: 1e6
 replay_buffer_capacity: ${num_train_steps}
 
 # evaluation config

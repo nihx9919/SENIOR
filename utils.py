@@ -5,7 +5,6 @@ import gym
 import os
 import random
 import math
-import dmc2gym
 import metaworld
 import metaworld.envs.mujoco.env_dict as _env_dict
 

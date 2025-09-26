@@ -3,31 +3,14 @@
 This is the official codebase of IROS 2025 paper: "[SENIOR: Efficient Query Selection and Preference-Guided Exploration in Preference-based Reinforcement Learning](https://2025senior.github.io/)". This codebase is largely originated and modified from [MRN](https://github.com/RyanLiu112/MRN).
 
 
-
 ## Install
-
-### Install Mujoco
-
-```python
-sudo apt update
-sudo apt install unzip gcc libosmesa6-dev libgl1-mesa-glx libglfw3 patchelf libegl1 libopengl0
-sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.so
-wget https://www.roboti.us/download/mujoco200_linux.zip -P /tmp
-unzip /tmp/mujoco200_linux.zip -d ~/.mujoco
-wget https://www.roboti.us/file/mjkey.txt -P /tmp
-mv /tmp/mjkey.txt ~/.mujoco/
-```
-
-
-
-### Install conda environment
-
+1. Install [Mujoco210](https://github.com/openai/mujoco-py)
+2. Installing conda environment
 ```python
 conda env create -f conda_env.yml
 conda activate senior
 pip install -e .[docs,tests,extra]
 pip install git+https://github.com/rlworkgroup/metaworld.git@04be337a12305e393c0caf0cbf5ec7755c7c8feb
-pip install termcolor pybullet
 ```
 
 
@@ -40,7 +23,7 @@ Run the following command fot six MetaWorld tasks:
 bash run_SENIOR.sh
 ```
 
-
+https://github.com/nihx9919/SENIOR
 
 ## Citation
 
