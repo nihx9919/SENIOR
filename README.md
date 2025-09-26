@@ -15,7 +15,7 @@ pip install git+https://github.com/rlworkgroup/metaworld.git@04be337a12305e393c0
 
 
 
-## Run experiment
+## Run experiments
 
 Run the following command fot six MetaWorld tasks:
 
